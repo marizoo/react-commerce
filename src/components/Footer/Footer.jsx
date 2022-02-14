@@ -4,7 +4,7 @@ import { ScFooter } from "./footer.styled";
 const Footer = () => {
     return (
         <ScFooter>
-            <h1>FOOTER BITCH</h1>
+            <h1>THIS IS THE FOOTER</h1>
         </ScFooter>
     );
 };

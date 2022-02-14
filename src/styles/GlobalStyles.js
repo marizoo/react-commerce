@@ -1,6 +1,6 @@
 import { css, createGlobalStyle } from "styled-components";
 
-// All global style
+// ALL GLOBAL STYLE
 export const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -41,17 +42,19 @@ ul {
     --gray-bg: lightgray;
     --brand-color: hotpink;
     --brand-color1: limegreen;
+    --primary-color: #212121;
+    --primary-bg: #fff;
   }
 
   .dark-theme {
-    --primary-color: #ff0000;
+    --primary-color: #fff;
     --primary-bg: #212121;
   }
 
 
 `;
 
-// Center and Column Styles
+// GLOBAL CENTER AND COLUMN STYLE
 // to use it :
 // ${GloColumn};
 
@@ -68,6 +71,37 @@ export const GloColumn = () => {
         display: flex;
         flex-direction: column;
         align-items: center;
+    `;
+};
+
+// GLOBAL MARGIN AND PADDING
+// to use it :
+// ${GloPadding};
+export const GloMargin = () => {
+    return css`
+        margin: 4rem 6rem;
+
+        @media screen and (max-width: 700px) {
+            margin: 4rem;
+        }
+
+        @media screen and (max-width: 550px) {
+            margin: 4rem 2rem;
+        }
+    `;
+};
+
+export const GloPadding = () => {
+    return css`
+        padding: 4rem 6rem;
+
+        @media screen and (max-width: 700px) {
+            padding: 4rem;
+        }
+
+        @media screen and (max-width: 550px) {
+            padding: 4rem 2rem;
+        }
     `;
 };
 
@@ -116,3 +150,34 @@ export const GloXXL = (props) => {
         }
     `;
 };
+
+// NOTES -----------------------
+/* Padding for media queries */
+// .GloPadding{
+//     padding: 4rem 6rem;
+// }
+
+// .GloMargin {
+//     margin: 4rem 6rem;
+// }
+
+// @media screen and (max-width: 700px) {
+//   .GloPadding {
+//     padding: 4rem;
+//   }
+
+//   .GloMargin {
+//     margin: 4rem;
+//   }
+// }
+
+// @media screen and (max-width: 550px) {
+//   .GloPadding {
+//     padding: 4rem 2rem;
+//   }
+
+//   .GloMargin {
+//     margin: 4rem 2rem;
+//   }
+// }
+// NOTES ----------------------------------------------
