@@ -1,7 +1,16 @@
 import React from "react";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/navbar/Navbar";
+import { GlobalStyles } from "./styles/GlobalStyles";
 
 const App = () => {
-    return <div>App</div>;
+    return (
+        <div>
+            <GlobalStyles />
+            <Navbar />
+            <Footer />
+        </div>
+    );
 };
 
 export default App;
