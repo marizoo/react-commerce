@@ -1,22 +1,15 @@
 import React, { useState } from "react";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import styled from "styled-components";
-import Button from "./UI/button/Button";
+import ToggleTheme from "./UI/toggleTheme/ToggleTheme";
 
 const ScApp = styled.div`
     width: 100vw;
-    height: 100vh;
     background: var(--primary-bg);
     color: var(--primary-color);
-`;
-
-const ToggleButton = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
+    position: relative;
 `;
 
 const App = () => {
@@ -29,9 +22,7 @@ const App = () => {
         <>
             <GlobalStyles />
             <ScApp className={`${mainCss}-theme`}>
-                <ToggleButton>
-                    <Button onClick={toggleTheme}>light/dark</Button>
-                </ToggleButton>
+                <ToggleTheme onToggleTheme={toggleTheme} mainCss={mainCss} />
                 <Navbar />
                 <Footer />
             </ScApp>

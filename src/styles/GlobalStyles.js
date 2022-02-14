@@ -2,7 +2,7 @@ import { css, createGlobalStyle } from "styled-components";
 
 // ALL GLOBAL STYLE
 export const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -38,12 +38,14 @@ ul {
 }
 
 :root, .light-theme {
-    --white-color: #ff0000;
-    --gray-bg: lightgray;
-    --brand-color: hotpink;
-    --brand-color1: limegreen;
     --primary-color: #212121;
     --primary-bg: #fff;
+    --col-brand: #ff69b4;
+    --col-brand-darker: #c04e87;
+    --col-white: #fff;
+    --col-black: black;
+    --col-gray: gray;
+    --col-lightgray: lightgray;
   }
 
   .dark-theme {
@@ -101,6 +103,20 @@ export const GloPadding = () => {
 
         @media screen and (max-width: 550px) {
             padding: 4rem 2rem;
+        }
+    `;
+};
+
+export const GloPaddingSm = () => {
+    return css`
+        padding: 2rem 6rem;
+
+        @media screen and (max-width: 700px) {
+            padding: 2rem;
+        }
+
+        @media screen and (max-width: 550px) {
+            padding: 1.5rem 1rem;
         }
     `;
 };
